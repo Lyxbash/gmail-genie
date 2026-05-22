@@ -4,6 +4,7 @@ Product images for the root README. Use a test account; redact sensitive content
 
 | File | Content |
 |------|---------|
+| [gmail-labels.png](gmail-labels.png) | Real Gmail sidebar — Genie label hierarchy |
 | [dashboard.png](dashboard.png) | Main dashboard |
 | [preview.png](preview.png) | Preview table + apply bar |
 | [review-queue.png](review-queue.png) | Review queue |

@@ -18,6 +18,12 @@ Runs on your machine. Gmail API is the only cloud touchpoint for mail access.
 
 ## Screenshots
 
+### Labels in Gmail
+
+Real sidebar after organizing — nested paths from `config.yaml` (e.g. `Jobs/Alerts`, `Finance/Receipts`, `Content/Newsletters`).
+
+![Gmail labels in sidebar](docs/screenshots/gmail-labels.png)
+
 ### Dashboard
 
 ![Dashboard](docs/screenshots/dashboard.png)
