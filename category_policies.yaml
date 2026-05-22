@@ -1,0 +1,76 @@
+# Category action policies — inbox always preserved (no archive/trash).
+policies:
+  Newsletters:
+    apply_label: true
+    archive: false
+    mark_read: false
+
+  Promotions:
+    apply_label: true
+    archive: false
+    mark_read: true
+
+  Security Alerts:
+    apply_label: true
+    archive: false
+    mark_read: false
+    star: true
+
+  Job Applications/Referrals:
+    apply_label: true
+    archive: false
+    important: true
+
+  Recruiters:
+    apply_label: true
+    archive: false
+
+  Finance:
+    apply_label: true
+    archive: false
+
+  Receipts:
+    apply_label: true
+    archive: false
+
+  Job Alerts:
+    apply_label: true
+    archive: false
+    mark_read: false
+
+  Social:
+    apply_label: true
+    archive: false
+
+  Docs:
+    apply_label: true
+    archive: false
+
+  Work:
+    apply_label: true
+    archive: false
+
+  Shopping:
+    apply_label: true
+    archive: false
+
+  Travel:
+    apply_label: true
+    archive: false
+
+  Education:
+    apply_label: true
+    archive: false
+
+  General:
+    apply_label: false
+    archive: false
+
+protected:
+  never_trash:
+    - Security Alerts
+    - Finance
+
+processing_limits:
+  max_actions_per_cycle: 50
+  max_trash_per_cycle: 0

@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENVIRONMENT: production
+      OLLAMA_HOST: host.docker.internal:11434
+    volumes:
+      - ./backend/data:/app/backend/data
+      - ./backend/logs:/app/backend/logs
+      - ./data:/app/data
+      - ./config.yaml:/app/config.yaml:ro
+      - ./category_policies.yaml:/app/category_policies.yaml:ro
+      # Mount OAuth files after first local auth:
+      - ./backend/credentials.json:/app/backend/credentials.json:ro
+      - ./backend/token.json:/app/backend/token.json
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE: http://localhost:8000
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

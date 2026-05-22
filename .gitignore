@@ -1,0 +1,100 @@
+# =============================================================================
+# Gmail Genie — public release .gitignore
+# Keep only source, docs, and example env files in version control.
+# =============================================================================
+
+# --- Environment (never commit real secrets) ---
+.env
+.env.*
+!.env.example
+!.env.production.example
+
+# --- Gmail OAuth / API credentials ---
+credentials.json
+**/credentials.json
+token.json
+**/token.json
+client_secret*.json
+**/client_secret*.json
+*.json.credentials
+credentials/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+*.so
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- SQLite / local databases ---
+*.db
+*.db-journal
+*.sqlite3
+
+# --- Runtime data (entire trees; .gitkeep preserves structure) ---
+backend/data/*
+!backend/data/.gitkeep
+data/*
+!data/.gitkeep
+
+# --- Logs ---
+logs/*
+!logs/.gitkeep
+backend/logs/*
+!backend/logs/.gitkeep
+*.log
+
+# --- Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+node_modules/
+
+# --- Build / cache / temp ---
+build/
+dist/
+tmp/
+temp/
+.cache/
+
+# --- Docker local overrides ---
+docker-compose.override.yml
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- IDE / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Debug / eval artifacts (generated locally) ---
+backend/debug_traces/
+backend/evaluation/failures.json
+backend/evaluation/last_eval.json
+
+# --- Cycle / session state (runtime) ---
+backend/data/last_cycle.json
+
+# --- Misc secrets / keys (patterns) ---
+*.pem
+*.key
+*.p12
+secrets/

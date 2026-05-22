@@ -1,0 +1,157 @@
+# Gmail Genie — main configuration (see README for setup)
+
+# --- Categories shown in UI and used by the classifier ---
+categories:
+  - Work
+  - Personal
+  - Finance
+  - Receipts
+  - Shopping
+  - Promotions
+  - Newsletters
+  - Job Applications/Referrals
+  - Job Alerts
+  - Recruiters
+  - Social
+  - Docs
+  - Security Alerts
+  - General
+
+# --- Gmail label paths (created on first apply if missing) ---
+labels:
+  Security Alerts: "Security/Alerts"
+  Finance: "Finance"
+  Receipts: "Finance/Receipts"
+  Job Alerts: "Jobs/Alerts"
+  Job Applications/Referrals: "Jobs/Applications"
+  Recruiters: "Jobs/Recruiters"
+  Newsletters: "Content/Newsletters"
+  Promotions: "Marketing/Promotions"
+  Social: "Social"
+  Docs: "Documents"
+  Work: "Work"
+  Shopping: "Shopping"
+  Travel: "Travel"
+  Education: "Education"
+  General: "General"
+
+# --- Local inference (Ollama) + optional Groq escalation ---
+llm:
+  provider: "ollama"
+  model: "mistral:7b-instruct"
+  temperature: 0.1
+  body_preview_chars: 250
+  rule_high_confidence: 0.93
+  rule_trust_short_circuit: 0.93
+  rule_medium_confidence: 0.70
+  semantic_accept_confidence: 0.70
+  groq_escalation_confidence: 0.55
+  semantic_retries: 1
+  groq_retries: 1
+  semantic_max_concurrency: 2
+  escalation_enabled: true
+  escalation_model: "llama-3.3-70b-versatile"
+  inference_timeout_seconds: 45
+  groq_timeout_seconds: 45
+  rule_verify_enabled: true
+  rule_verify_min_confidence: 0.72
+  rule_verify_max_confidence: 0.82
+  rule_verify_accept_confidence: 0.70
+
+# --- Gmail API transport (keep concurrency ≤ 5 on Windows) ---
+gmail:
+  http_timeout_seconds: 120
+  api_retries: 3
+  fetch_concurrency: 3
+
+# --- App defaults ---
+app:
+  environment: development
+  gmail_query: "newer_than:14d -in:sent -in:chats"
+  max_emails: 25
+  confidence_threshold: 0.70
+
+# --- Per-category actions (archive must stay false — inbox preserved) ---
+actions:
+  Job Alerts:
+    apply_label: true
+    archive: false
+    mark_read: false
+  Job Applications/Referrals:
+    apply_label: true
+    archive: false
+    important: true
+  Recruiters:
+    apply_label: true
+    archive: false
+  Promotions:
+    apply_label: true
+    archive: false
+    mark_read: true
+  Newsletters:
+    apply_label: true
+    archive: false
+    mark_read: false
+  Finance:
+    apply_label: true
+    archive: false
+  Receipts:
+    apply_label: true
+    archive: false
+  Security Alerts:
+    apply_label: true
+    archive: false
+    star: true
+  Social:
+    apply_label: true
+    archive: false
+  Docs:
+    apply_label: true
+    archive: false
+  Work:
+    apply_label: true
+    archive: false
+  Shopping:
+    apply_label: true
+    archive: false
+  Travel:
+    apply_label: true
+    archive: false
+  Education:
+    apply_label: true
+    archive: false
+  General:
+    apply_label: false
+
+# --- Safety caps (never trash/archive from Genie) ---
+safety:
+  max_actions_per_run: 50
+  never_trash:
+    - Security Alerts
+    - Finance
+
+# --- Action audit log ---
+logging:
+  enabled: true
+  path: "backend/logs/actions.log"
+
+# --- Optional automatic runs (off by default for new users) ---
+scheduler:
+  enabled: false
+  interval_minutes: 15
+  dry_run: true
+  target_actionable: 25
+
+# --- Health check cache ---
+health:
+  cache_ttl_seconds: 45
+
+# --- Inbox scan + cycle limits ---
+processing:
+  deduplicate: true
+  unread_only: false
+  target_unprocessed_per_cycle: 25
+  gmail_page_size: 25
+  max_scan_pages: 10
+  max_actions_per_cycle: 50
+  max_trash_per_cycle: 0

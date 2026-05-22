@@ -1,0 +1,182 @@
+[
+  {
+    "sender": "TLDR <hello@tldrnewsletter.com>",
+    "subject": "DeepSeek v4",
+    "snippet": "DeepSeek has unveiled a new model. Plus OpenAI updates and startup funding news.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "DeepLearning.AI <newsletter@deeplearning.ai>",
+    "subject": "The Batch @ DeepLearning.AI — Issue 42",
+    "snippet": "Weekly AI newsletter digest with curated research and industry news.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "CodePen <newsletter@codepen.io>",
+    "subject": "The Code — your weekly front-end digest",
+    "snippet": "This week's edition of curated pens and CSS tricks.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "LinkedIn <newsletters-noreply@linkedin.com>",
+    "subject": "Kunal Kushwaha via LinkedIn — Weekly digest",
+    "snippet": "Top posts from your network this week.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "LeetCode <no-reply@leetcode.com>",
+    "subject": "LeetCode Weekly Digest",
+    "snippet": "Popular problems and contest roundup for the week.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "Google Play <googleplay-noreply@google.com>",
+    "subject": "Your Google Play refund has been approved",
+    "snippet": "Transaction ID 123. Payment method Visa. Refund processed.",
+    "expected_category": "Receipts"
+  },
+  {
+    "sender": "Google One <googleone-noreply@google.com>",
+    "subject": "You've activated a new Google AI Pro 5 TB plan",
+    "snippet": "Subscription activated. Billing starts today.",
+    "expected_category": "Finance"
+  },
+  {
+    "sender": "Stripe <receipts@stripe.com>",
+    "subject": "Your receipt from Acme #1234",
+    "snippet": "Thanks for your payment. Invoice attached.",
+    "expected_category": "Receipts"
+  },
+  {
+    "sender": "PayPal <service@paypal.com>",
+    "subject": "You sent a payment",
+    "snippet": "Transaction receipt payment debited from your account.",
+    "expected_category": "Finance"
+  },
+  {
+    "sender": "Amazon <order-update@amazon.com>",
+    "subject": "Your Amazon.com order of item",
+    "snippet": "Order receipt invoice shipped to your address.",
+    "expected_category": "Receipts"
+  },
+  {
+    "sender": "GitHub <security@github.com>",
+    "subject": "Security alert: vulnerable dependency",
+    "snippet": "We found a dependency with a known vulnerability in your repo.",
+    "expected_category": "Security Alerts"
+  },
+  {
+    "sender": "Google <accounts-noreply@google.com>",
+    "subject": "Your verification code is 482910",
+    "snippet": "Use this code to sign in. Do not share it.",
+    "expected_category": "Security Alerts"
+  },
+  {
+    "sender": "LinkedIn <jobs-noreply@linkedin.com>",
+    "subject": "Your job recommendations for this week",
+    "snippet": "Based on your profile we found new roles hiring near you.",
+    "expected_category": "Job Alerts"
+  },
+  {
+    "sender": "LinkedIn <invitations@linkedin.com>",
+    "subject": "You have a new invitation",
+    "snippet": "Accept your invitation to connect on LinkedIn.",
+    "expected_category": "Social"
+  },
+  {
+    "sender": "LinkedIn <noreply@linkedin.com>",
+    "subject": "Someone viewed your profile",
+    "snippet": "See who viewed your profile this week.",
+    "expected_category": "Social"
+  },
+  {
+    "sender": "LeetCode <no-reply@leetcode.com>",
+    "subject": "Your application status update",
+    "snippet": "Your application has moved to the next stage.",
+    "expected_category": "Job Applications/Referrals"
+  },
+  {
+    "sender": "Zoom <no-reply@zoom.us>",
+    "subject": "Reminder: Team standup meeting starts in 15 minutes",
+    "snippet": "Join Zoom Meeting. Calendar invite attached.",
+    "expected_category": "Work"
+  },
+  {
+    "sender": "Coursera <noreply@coursera.org>",
+    "subject": "Free webinar: Machine Learning foundations",
+    "snippet": "Register for our live educational webinar this Thursday.",
+    "expected_category": "Education"
+  },
+  {
+    "sender": "Shopify <billing@shopify.com>",
+    "subject": "50% off annual plans — limited time sale",
+    "snippet": "Upgrade now and save on your subscription. Discount ends Friday.",
+    "expected_category": "Promotions"
+  },
+  {
+    "sender": "Uber <noreply@uber.com>",
+    "subject": "Your trip receipt from Tuesday",
+    "snippet": "Thanks for riding. Total charged $24.50.",
+    "expected_category": "Receipts"
+  },
+  {
+    "sender": "FedEx <tracking@fedex.com>",
+    "subject": "Your package is out for delivery",
+    "snippet": "Track your shipment. Estimated delivery today.",
+    "expected_category": "Shopping"
+  },
+  {
+    "sender": "Notion <team@makenotion.com>",
+    "subject": "Alex shared a page with you",
+    "snippet": "You have been invited to view a document in Notion.",
+    "expected_category": "Docs"
+  },
+  {
+    "sender": "Recruiter <hiring@acmecorp.com>",
+    "subject": "Senior engineer role — quick chat?",
+    "snippet": "I came across your profile and would love to discuss an opening.",
+    "expected_category": "Recruiters"
+  },
+  {
+    "sender": "Google <no-reply@google.com>",
+    "subject": "Finish setting up your iPhone with Google",
+    "snippet": "Complete setup to sync contacts and calendar.",
+    "expected_category": "General"
+  },
+  {
+    "sender": "Google <no-reply@google.com>",
+    "subject": "Your account summary is ready",
+    "snippet": "Review your Google account activity for the month.",
+    "expected_category": "General"
+  },
+  {
+    "sender": "LinkedIn <noreply@linkedin.com>",
+    "subject": "Your weekly account summary",
+    "snippet": "Activity summary without job recommendations.",
+    "expected_category": "Social"
+  },
+  {
+    "sender": "LeetCode <no-reply@leetcode.com>",
+    "subject": "Explore new problems on LeetCode",
+    "snippet": "Try today's challenge — not an application update.",
+    "expected_category": "General"
+  },
+  {
+    "sender": "Substack <hello@substack.com>",
+    "subject": "New post from Stratechery",
+    "snippet": "Weekly edition on tech strategy and platforms.",
+    "expected_category": "Newsletters"
+  },
+  {
+    "sender": "American Airlines <noreply@aa.com>",
+    "subject": "Your flight itinerary for SFO → JFK",
+    "snippet": "Confirmation number ABC123. Check in opens 24 hours before departure.",
+    "expected_category": "Travel"
+  },
+  {
+    "sender": "Mom <mom@familymail.com>",
+    "subject": "Dinner this Sunday?",
+    "snippet": "Let me know if you can make it. Love, Mom.",
+    "expected_category": "Personal"
+  }
+]
