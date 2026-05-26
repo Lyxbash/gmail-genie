@@ -1,6 +1,6 @@
 # Gmail Genie
 
-**Local AI inbox organizer — preview-first labeling, inbox preserved, fully reversible.**
+**Local AI inbox organizer - preview-first labeling, inbox preserved, fully reversible.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
@@ -10,7 +10,7 @@
 ![Docker](https://img.shields.io/badge/Docker-supported-2496ED?logo=docker&logoColor=white)
 ![Gmail API](https://img.shields.io/badge/Gmail%20API-OAuth2-EA4335?logo=gmail&logoColor=white)
 
-Organize recent Gmail with **rules + local AI (Ollama)**. Genie adds **labels only** — no archive, no trash. **Preview** suggestions before apply, then **undo** the last apply if needed.
+Organize recent Gmail with **rules + local AI (Ollama)**. Genie adds **labels only** - no archive, no trash. **Preview** suggestions before apply, then **undo** the last apply if needed.
 
 Runs on your machine. Gmail API is the only cloud touchpoint for mail access.
 
